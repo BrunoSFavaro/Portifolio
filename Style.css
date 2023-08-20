@@ -18,6 +18,20 @@
     --main-color: #00abf0;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -548,6 +562,12 @@ span {
     position: relative;
     width: 49%;
     margin: .8rem 0;
+}
+
+.contato .input-field #cel::-webkit-inner-spin-button,
+.contato .input-field #cel::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .contato form .input-box .input-field input,
