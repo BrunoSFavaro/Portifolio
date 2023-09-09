@@ -24,6 +24,12 @@ window.onscroll = () => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
+            // Animação scroll 
+            sec.classList.add('show-animate');
+        }
+        //if want to use animation that repeats on scroll use this
+        else {
+            sec.classList.remove('show-animate');
         }
     });
     // Tirando a transparência do header
@@ -34,4 +40,9 @@ window.onscroll = () => {
     // removendo os icones e a navbar quando houver clique em algum dos links (âncora)
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
+
+    // animação do footer
+    let footer = document.querySelector('footer');
+
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
